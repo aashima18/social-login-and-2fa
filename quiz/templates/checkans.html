@@ -1,0 +1,37 @@
+
+{% extends 'base1.html' %}
+
+{% block content %}
+
+
+<div class="section-header text-center" style="color: black;">
+    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s" style="color: black;margin-left:0px;">Quiz check</h2>
+    <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+    <p style="color: deepskyblue;font-size: 18px;">Number of questions : 10 | Time : 20 minutes</p>
+  </div>
+
+
+<div class="container1" style="color: black;">
+   
+<hr>
+   {% for adrs in adr %}
+     {% for adrss in adrr %}
+     
+   
+     <br>>Questions:  {{adrs.questions}}<br>
+     <p style="color:red">answer:  {{adrs.answer}}</p><br>
+     
+    {% comment %} {% for ans in adrss.answer1 %} {% endcomment %}
+      <p style="color:deepskyblue;"> your answer: {{ adrss.answer1 }}
+     
+      </p><br>
+     
+     {% endfor %}
+    {% endfor %}
+
+     {% comment %} {% endfor %}{% endcomment %}
+     
+
+</div>
+
+{% endblock %}
